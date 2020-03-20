@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'arequest_demo.apps.ArequestDemoConfig',
     'bresponse_demo.apps.BresponseDemoConfig',
+    'creview.apps.CreviewConfig',
 ]
 
 # 中间件
@@ -141,7 +142,7 @@ STATIC_URL = '/static/'
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.cache.RedisCache',
-        'LOCATION': 'localhost:6379/1',
+        'LOCATION': 'localhost:6379:1',
         'TIMEOUT':300,
     }
 }

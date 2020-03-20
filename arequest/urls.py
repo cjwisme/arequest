@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("arequest_demo.urls")),
     path('', include("bresponse_demo.urls")),
+    # 基于seesion,cookie
+    path('', include("creview.urls")),  
 ]
