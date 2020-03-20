@@ -133,3 +133,18 @@ STATICFILES_DIRS = [
 ]
 # 静态资源访问路由
 STATIC_URL = '/static/'
+
+
+# https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-CACHES-BACKEND
+# 缓存
+# 1. pip3 install django-redis-cache
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.cache.RedisCache',
+        'LOCATION': 'localhost:6379/1',
+        'TIMEOUT':300,
+    }
+}
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = 'default'
+
