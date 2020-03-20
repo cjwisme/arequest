@@ -21,4 +21,5 @@ from arequest_demo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("arequest_demo.urls")),
+    path('', include("bresponse_demo.urls")),
 ]

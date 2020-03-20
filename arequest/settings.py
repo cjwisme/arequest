@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'arequest_demo.apps.ArequestDemoConfig',
+    'bresponse_demo.apps.BresponseDemoConfig',
 ]
 
 # 中间件
