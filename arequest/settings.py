@@ -142,7 +142,7 @@ STATIC_URL = '/static/'
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.cache.RedisCache',
-        'LOCATION': 'localhost:6379:1',
+        'LOCATION': 'redis://127.0.0.1:6379/1',
         'TIMEOUT':300,
     }
 }
