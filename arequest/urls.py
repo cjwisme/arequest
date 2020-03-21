@@ -24,4 +24,6 @@ urlpatterns = [
     path('', include("bresponse_demo.urls")),
     # 基于seesion,cookie
     path('', include("creview.urls")),  
+    # 基于类视图
+    path("",include('dclassview.urls'))
 ]

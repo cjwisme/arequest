@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'arequest_demo.apps.ArequestDemoConfig',
     'bresponse_demo.apps.BresponseDemoConfig',
     'creview.apps.CreviewConfig',
+    'dclassview.apps.DclassviewConfig',
 ]
 
 # 中间件
