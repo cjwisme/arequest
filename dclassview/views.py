@@ -6,6 +6,25 @@ from django.views.generic.base import View
 # Create your views here.
 
 
+# 4.扩展Mixin 方式
+
+class DecoratorMixin(object):
+    @classmethod
+    def as_view(cls,*args,**kwargs):
+        # 利用多继承的特性，调用父类的as_view方法
+        view = super().as_view(*args,**kwargs)
+        view = django_login_decorator(view)
+        return view
+
+
+class LoginViewMixin(DecoratorMixin,View):
+    def get(self, request):
+        return HttpResponse("类视图--Mixin--GET---登录页面")
+
+    def post(self, request):
+        return HttpResponse("类视图--Mixin--POST---登录页面")
+
+
 # 装饰器
 
 def login_decorator(func):
@@ -32,7 +51,7 @@ class LoginView(View):
     @method_decorator(django_login_decorator)
     def get(self,request):
         return HttpResponse("类视图----GET---登录页面")
-    
+
     def post(self,request):
         return HttpResponse("类视图----POST---登录页面")
 

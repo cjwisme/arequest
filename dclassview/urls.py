@@ -8,4 +8,5 @@ urlpatterns = [
 
     # 类视图
     path("dclassview",views.LoginView.as_view()),
+    path("dclassview_mixin",views.LoginViewMixin.as_view()),
 ]
