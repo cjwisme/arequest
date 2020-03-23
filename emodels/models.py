@@ -3,7 +3,16 @@ from datetime import  date
 
 # Create your models here.
 
+# 自定义管理对象
+
+class BookManager(models.Manager):
+
+    def all(self):
+        return super().all()
+
 class BookInfo(models.Model):
+
+    books = BookManager()
     btitle = models.CharField(max_length=20, verbose_name='名称')
     bpub_date = models.DateField(verbose_name='发布日期')
     bread = models.IntegerField(default=0, verbose_name='阅读量')
