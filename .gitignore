@@ -10,3 +10,4 @@ upgrade/
 front_web/static/qr/
 *test*
 venv
+templates/
